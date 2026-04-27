@@ -27,5 +27,5 @@ COPY --from=build /app/target/*.jar app.jar
 # 5. Exponemos el puerto estándar de Spring Boot
 EXPOSE 8080
 
-# 6. Comando de inicio con optimización de memoria para contenedores
+# 6. Comando de inicio con optimización de memoria para contenedores a
 ENTRYPOINT ["java", "-XX:+UseContainerSupport", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
